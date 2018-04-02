@@ -37,7 +37,7 @@ namespace Assets
                     {
                         var heel = HeelSpeed * Time.deltaTime;
                         _curHeel -= heel;
-                        transform.Rotate(0, 0, -heel);
+                        transform.Rotate(0, -heel, 0);
                     }
                 }
                 else if (Input.GetKey("a"))
@@ -46,7 +46,7 @@ namespace Assets
                     {
                         var heel = HeelSpeed * Time.deltaTime;
                         _curHeel += heel;
-                        transform.Rotate(0, 0, +heel);
+                        transform.Rotate(0, +heel, 0);
                     }
                 }
                 else
@@ -57,12 +57,12 @@ namespace Assets
                         if (_curHeel < 0)
                         {
                             _curHeel += heel;
-                            transform.Rotate(0, 0, +heel);
+                            transform.Rotate(0, +heel, 0);
                         }
                         else
                         {
                             _curHeel -= heel;
-                            transform.Rotate(0, 0, -heel);
+                            transform.Rotate(0, -heel, 0);
                         }
                     }
                 }
